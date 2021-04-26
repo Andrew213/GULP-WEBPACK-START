@@ -22,46 +22,11 @@ module.exports = {
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, path.basename(__dirname)),
-        // assetModuleFilename: "images/[hash][ext][query]",
         publicPath: ""
     },
 
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     loader: 'html-loader',
-            //     options: {
-            //         esModule: false
-            //     }
-            // },
-            // {
-            //     test: /\.(png|jpg|svg|webp)$/i,
-            //     type: "asset",
-            // },
-            // {
-            //     test: /\.(s[ac]|c)ss$/i,
-            //     use: [
-            //         // {
-            //         //     loader: miniCssExcteractPlugin.loader,
-            //         //     options: {
-            //         //         publicPath: " "
-            //         //     }
-            //         // },
-            //         "style-loader",
-            //         {
-            //             loader: "css-loader",
-            //             options: {
-            //                 modules: {
-            //                     mode: 'local',
-            //                     localIdentName: '[name]_[local]-[hash:base64:5]'
-            //                 }
-            //             }
-            //         },
-            //         "postcss-loader",
-            //         "sass-loader"
-            //     ]
-            // },
             {
                 test: /\.(ts|js|jsx|tsx)$/,
                 exclude: /node_modules/,
@@ -82,10 +47,4 @@ module.exports = {
 
     // ],
     devtool: "source-map",
-    // devServer: {
-    //     contentBase: `${path.basename(__dirname)}`,
-    //     publicPath: "",
-    //     open: true,
-
-    // }
 }

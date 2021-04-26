@@ -1,0 +1,9 @@
+С правами администратора!
+
+ npm install webp-converter@2.2.3 --save-dev
+
+Переустановка node-sass
+npm rebuild node-sass
+
+Проблема с pyton
+npm install --global windows-build-tools

@@ -1,0 +1,136 @@
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+$purpure-light: #9d5cd0;
+$purpure-link: #c283f3;
+
+.button {
+  background-color: transparent;
+  outline-color: $purpure-light;
+  outline-color: #c283f3;
+  transition: 0.3s;
+  &:hover {
+    color: #c283f3;
+  }
+  &:active {
+    color: #9d5cd0;
+  }
+}
+.hide {
+  display: none !important;
+}
+.section-container {
+  padding-top: 90px;
+  padding-bottom: 70px;
+}
+
+.slider-control {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 26px;
+}
+
+.slider-control__arrow {
+  flex-basis: 11px;
+  height: 12px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #666;
+  slider:focus {
+    padding: 13px;
+    outline: none;
+    border: 2px solid #7943a4;
+  }
+  .slider-control:hover {
+    transition: 0.3s;
+    background-color: #9d5cd0;
+  }
+  .slider-control:active {
+    transition: 0;
+    padding: 13px;
+    background-color: #7943a4;
+    border-color: #d1a9f0;
+  }
+  &:hover {
+    transition: background-color 0.3s;
+    background-color: #9d5cd0;
+  }
+}
+
+.slider-control__fraction {
+  font-size: 16px;
+  width: auto;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .slider-control {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .slider-control {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 719px) {
+  .slider-control__arrow {
+    padding: 12px;
+    flex-basis: 11px;
+    height: 12px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #666;
+    &:focus {
+      padding: 12px;
+      outline: none;
+      border: 2px solid #7943a4;
+    }
+    &:hover {
+      background-color: #666;
+    }
+    &:active {
+      transition: 0;
+      padding: 12px;
+      background-color: #7943a4;
+      border-color: #d1a9f0;
+    }
+  }
+
+  .slider-control {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .slider-control__fraction {
+    margin: 0 12px;
+  }
+}
